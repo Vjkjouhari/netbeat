@@ -10,4 +10,11 @@ export default defineConfig({
       "@": path.resolve(__dirname, "./src"),
     },
   },
+  build: {
+    // Specify the output directory
+    outDir: "dist/client", // Ensure the output is in dist/client
+    rollupOptions: {
+      input: path.resolve(__dirname, "index.html"), // Ensure the correct entry point
+    },
+  },
 });
